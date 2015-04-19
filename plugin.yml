@@ -1,0 +1,8 @@
+---
+name: JoinEffect
+version: 0.1
+api: 1.12.0
+author: TonyDroidd
+main: TDroidd\JoinEffect\main
+description: Allows players to receive an effect when they join to server
+website: https://github.com/TonyDroidd/JoinEffect
