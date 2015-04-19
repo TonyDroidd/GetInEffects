@@ -3,6 +3,7 @@
 namespace TDroidd\JoinEffect;
 use pocketmine\Player;
 use pocketmine\entity\Effect;
+use pocketmine\plugin\PluginBase
 
    class Main extends PluginBase implements Listener{
 	public function onEnable(){
@@ -19,3 +20,9 @@ use pocketmine\entity\Effect;
             $effect->setDuration(1200); //Ticks
             $p->addEffect($effect);
         }
+        
+	public function onEnable(){
+		@mkdir($this->getDataFolder() . "JoinEffect";
+		$this->effects = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
+		));
+	}
