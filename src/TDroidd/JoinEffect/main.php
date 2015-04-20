@@ -6,7 +6,7 @@ use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
-use pocketmine\event\player\PlayerJoinEvent
+use pocketmine\event\player\PlayerJoinEvent;
 
 class JoinEffect extends PluginBase implements Listener{
 
