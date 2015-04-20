@@ -19,8 +19,14 @@ class Main extends PluginBase implements Listener {
 	 */	
 	public function onEnable(){
 	        $this->saveDefaultConfig();
-		$EffectID = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
-		$this->Effect = array($EffectID["EffectID"]);
+			@mkdir($this->getDataFolder());
+			
+			if(!file_exists($this->getDataFolder() . "config.yml")){
+				file_put_contents($this->getDataFolder() . "config.yml",yaml_emit(array()));
+				}
+			$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, [
+				"EffectID" => "1",
+			]);
                 $this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.1 Enabled!");
 
 }
