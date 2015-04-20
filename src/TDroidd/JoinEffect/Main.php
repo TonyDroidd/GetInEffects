@@ -7,9 +7,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 use pocketmine\event\player\PlayerJoinEvent;
-use TDroidd\JoinEffect\main;
 
-class Main extends PluginBase{
+class Main extends PluginBase implements Listener
 	public function onEnable(){
 		 $this->saveDefaultConfig();
 		$EffectID = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
