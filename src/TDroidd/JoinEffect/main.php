@@ -9,15 +9,13 @@ use pocketmine\utils\Config;
 use pocketmine\event\player\PlayerJoinEvent;
 
 class JoinEffect extends PluginBase implements Listener{
-
 	public function onEnable(){
-			@mkdir($this->getServer()->getDataFolder() . "JoinEffect");
-		$this->effects = new Config($this->getServer()->getDataFolder() . "JoinEffect" . "config.yml", Config::YAML, )["EffectID" => 1]->getAll();
+		 $this->saveDefaultConfig();
+		$EffectID = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
 }
-
 	public function onJoin(PlayerJoinEvent $event) {
 		$p = $event->getPlayer();
-			$effect = Effect::getEffect(1); //Effect ID
+			$effect = Effect::getEffect($EffectID); //Effect ID
 			$effect->setVisible(false); //Particles
 			$effect->setDuration(1200); //Ticks
 			$p->addEffect($effect);
