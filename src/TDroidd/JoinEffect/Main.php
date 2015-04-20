@@ -19,7 +19,7 @@ class Main extends PluginBase implements Listener {
 	        $this->saveDefaultConfig();
 		$EffectID = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
 		$this->Effect = array($EffectID["EffectID"]);
-                $this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.0.1 Enabled!");
+                $this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.1 Enabled!");
 }
 	public function onJoin(PlayerJoinEvent $event) {
 		$p = $event->getPlayer();
@@ -38,6 +38,6 @@ class Main extends PluginBase implements Listener {
 	 */
 	public function onDisable() {
 		$this->save ();
-		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.0.1 Unloaded!");
+		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.1 Unloaded!");
 	}
 }
