@@ -12,7 +12,6 @@ class JoinEffect extends PluginBase implements Listener{
 	public function onEnable(){
 			@mkdir($this->getServer()->getDataFolder() . "JoinEffect");
 		$this->effects = new Config($this->getServer()->getDataFolder() . "JoinEffect" . "config.yml", Config::YAML, )["EffectID" => 1]->getAll();
-	}
 }
 
 	public function onJoin(PlayerJoinEvent $event) {
@@ -21,6 +20,5 @@ class JoinEffect extends PluginBase implements Listener{
 			$effect->setVisible(false); //Particles
 			$effect->setDuration(1200); //Ticks
 			$p->addEffect($effect);
-		}	
 	}
 }
