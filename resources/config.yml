@@ -20,6 +20,6 @@
 #WEAKNESS = 18
 #POISON = 19
 #WITHER = 20
-#HEALTH_BOOST = 21
+#HEALTH_BOOST = 2
 
-EffectID: 1
+- EffectID: "1"
