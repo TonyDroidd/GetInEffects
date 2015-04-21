@@ -27,7 +27,7 @@ class Main extends PluginBase implements Listener {
 
 	public function onJoin(PlayerJoinEvent $event) {
 			$p = $event->getPlayer();
-			$effect = Effect::getEffect($this->effect = $c["EffectID"]); //Effect ID
+			$effect = Effect::getEffect($this->getConfig()->get("Effect.ID")); //Effect ID
 			$effect->setVisible(false); //Particles
 			$effect->setDuration(1200); //Ticks
 			$p->addEffect($effect);
