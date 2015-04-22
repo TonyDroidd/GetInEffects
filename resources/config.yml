@@ -22,4 +22,4 @@
 #WITHER = 20
 #HEALTH_BOOST = 2
 
-Effect.ID: "1"
+Effect-ID: "1"
