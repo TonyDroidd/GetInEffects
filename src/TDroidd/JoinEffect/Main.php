@@ -21,11 +21,12 @@ class Main extends PluginBase implements Listener {
 		$this->saveDefaultConfig();
 		$cfg = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
 		$this->effect = array($cfg["Effect-ID"]);
+		$this->getServer()->getPluginManager()->registerEvents($this,$this);
         	$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.1 Enabled!");
 
 }
 
-	public function onPlayerJoin(PlayerJoinEvent $event) {
+	public function onSpawn(PlayerRespawnEvent $event) {
 		$p = $event->getPlayer();
 		$effect = Effect::getEffect($this->getConfig()->get("Effect-ID")); //Effect ID
 		$effect->setVisible(false); //Particles
