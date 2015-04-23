@@ -7,7 +7,7 @@ use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerRespawnEvent;
+use pocketmine\utils\TextFormat;
 class Main extends PluginBase implements Listener {
 	/**
 	 * OnEnable
@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
 		$this->particles = array($cfg["Particles"]);
 		$cfg = $this->getConfig()->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.1 Enabled!");
+		$this->getLogger()->info(TextFormat::GREEN . "JoinEffect By TDroidd  0.1 Enabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
 		$p = $event->getPlayer();
