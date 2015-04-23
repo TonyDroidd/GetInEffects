@@ -22,4 +22,7 @@
 #WITHER = 20
 #HEALTH_BOOST = 2
 
+#Duration in ticks: 1200 = 1 Minute
+
 Effect-ID: "1"
+Duration: "2400"
