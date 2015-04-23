@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.1 Enabled!");
 }
-		public function onSpawn(PlayerRespawnEvent $event) {
+		public function onJoin(PlayerJoinEvent $event) {
 		$p = $event->getPlayer();
 		$cfg = $this->getConfig()->getAll();
 		$effect = Effect::getEffect($this->effect = $cfg["Effect-ID"]); //Effect ID
