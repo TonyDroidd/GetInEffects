@@ -21,6 +21,7 @@ class Main extends PluginBase implements Listener {
 		$cfg = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
 		$this->effect = array($cfg["Effect-ID"]);
 		$this->duration = array($cfg["Duration"]);
+		$this->particles = array($cfg["Particles"]);
 		$cfg = $this->getConfig()->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd  0.1 Enabled!");
@@ -29,8 +30,8 @@ class Main extends PluginBase implements Listener {
 		$p = $event->getPlayer();
 		$cfg = $this->getConfig()->getAll();
 		$effect = Effect::getEffect($this->effect = $cfg["Effect-ID"]); //Effect ID
-		$effect->setVisible(false); //Particles
-		$effect->setDuration($this->effect = $cfg["Duration"]); //Ticks
+		$effect->setVisible($this->particles = $cfg["Particles"]); //Particles
+		$effect->setDuration($this->duration = $cfg["Duration"]); //Ticks
 		$p->addEffect($effect);
 	}
 	/**
