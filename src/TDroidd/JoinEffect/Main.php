@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
 		$this->particles = array($cfg["Particles"]);
 		$cfg = $this->getConfig()->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info(TextFormat::GREEN . "JoinEffect By TDroidd  0.1 Enabled!");
+		$this->getLogger()->info(TextFormat::GREEN . "JoinEffect By TDroidd v0.5 Enabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
 		$p = $event->getPlayer();
@@ -41,6 +41,6 @@ class Main extends PluginBase implements Listener {
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
 	 */
 	public function onDisable() {
-		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd 0.1 Unloaded!");
+		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd v0.5 Unloaded!");
 	}
 }
