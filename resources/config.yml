@@ -24,8 +24,10 @@
 
 #Effect-ID: ID pf the effect
 #Duration in ticks: 1200 = 1 Minute
+#Amplifier = Power of the effect
 #Particles: Show particles of the effect--> true / false
 
 Effect-ID: "1"
 Duration: "2400"
+Amplifier: "0"
 Particles: true
