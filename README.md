@@ -1,4 +1,9 @@
 # JoinEffect
-Allows players to receive an effect when they join the server. <br>
+* Description: Allows players to receive an effect when they join to server
+* Dependency: n/a
+* PocketMine-MP version: 1.5 - API 1.12.0
+* Categories: Fun, Admin Tools, General
+* Plugin Access: Entities
+* WebSite: https://github.com/TonyDroidd/JoinEffect
 <br>
-<img src="http://i.imgur.com/tfB4l4B.jpgg" alt="Plugin Icon" style="width:90px;height:90px">
+<br>
