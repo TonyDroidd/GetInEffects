@@ -5,7 +5,6 @@ use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
-use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\utils\TextFormat;
 class Main extends PluginBase implements Listener {
@@ -25,7 +24,7 @@ class Main extends PluginBase implements Listener {
 		$this->amplifier = array($cfg["Amplifier"]);
 		$cfg = $this->getConfig()->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info(TextFormat::GREEN . "JoinEffect By TDroidd v0.5 Enabled!");
+		$this->getLogger()->info("JoinEffect By TDroidd v0.5 Enabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
 		$p = $event->getPlayer();
@@ -43,6 +42,6 @@ class Main extends PluginBase implements Listener {
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
 	 */
 	public function onDisable() {
-		$this->getLogger()->info(TextFormat::RED . "JoinEffect By TDroidd v0.5 Unloaded!");
+		$this->getLogger()->info("JoinEffect By TDroidd v0.5 Unloaded!");
 	}
 }
