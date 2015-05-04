@@ -26,8 +26,12 @@
 #Duration in ticks: 1200 = 1 Minute
 #Amplifier = Power of the effect
 #Particles: Show particles of the effect--> true / false
+#Join-Message: Send message to player when join to the server
 
 Effect-ID: "1"
 Duration: "2400"
 Amplifier: "0"
 Particles: true
+-------------
+Join-Message: true
+Message: Welcome To My Server!
