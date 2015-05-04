@@ -22,6 +22,8 @@ class Main extends PluginBase implements Listener {
 		$this->duration = array($cfg["Duration"]);
 		$this->particles = array($cfg["Particles"]);
 		$this->amplifier = array($cfg["Amplifier"]);
+		$this->jmessage = array($cfg["Join-Message"]);
+        	$msg=$cfg->get("Message");
 		$cfg = $this->getConfig()->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info("JoinEffect By TDroidd 1.0 Enabled!");
@@ -34,7 +36,11 @@ class Main extends PluginBase implements Listener {
 		$effect->setAmplifier($this->amplifier = $cfg["Amplifier"]);
 		$effect->setDuration($this->duration = $cfg["Duration"]); //Ticks
 		$p->addEffect($effect);
+		if ($this->message = $cfg["Join-Message"] == true){
+		$p->sendMessage("$msg"]");
+		}
 	}
+}
 	/**
 	 * OnDisable
 	 * (non-PHPdoc)
