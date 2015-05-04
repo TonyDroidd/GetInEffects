@@ -34,7 +34,7 @@ class Main extends PluginBase implements Listener {
 		$effect->setAmplifier($this->amplifier = $cfg["Amplifier"]);
 		$effect->setDuration($this->duration = $cfg["Duration"]); //Ticks
 		$p->addEffect($effect);
-		}
+	}
 	/**
 	 * OnDisable
 	 * (non-PHPdoc)
