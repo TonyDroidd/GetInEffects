@@ -1,6 +1,13 @@
-# JoinEffect by TonyDroidd
+#╭━━━━╮╱╱╱╱╱╱╱╱╱╭━━━╮╱╱╱╱╱╱╱╭╮╱╭╮
+#┃╭╮╭╮┃╱╱╱╱╱╱╱╱╱╰╮╭╮┃╱╱╱╱╱╱╱┃┃╱┃┃
+#╰╯┃┃╰╋━━┳━╮╭╮╱╭╮┃┃┃┣━┳━━┳┳━╯┣━╯┃
+#╱╱┃┃╱┃╭╮┃╭╮┫┃╱┃┃┃┃┃┃╭┫╭╮┣┫╭╮┃╭╮┃
+#╱╱┃┃╱┃╰╯┃┃┃┃╰━╯┣╯╰╯┃┃┃╰╯┃┃╰╯┃╰╯┃
+#╱╱╰╯╱╰━━┻╯╰┻━╮╭┻━━━┻╯╰━━┻┻━━┻━━╯
+#╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+#╱╱╱╱╱╱╱╱╱╱╱╰━━╯
 
-#Effect ID's
+#Effects ID's
 
 #SPEED = 1
 #SLOWNESS = 2
@@ -22,10 +29,10 @@
 #WITHER = 20
 #HEALTH_BOOST = 2
 
-#Effect-ID: ID pf the effect
+#Effect-ID: ID of the effect
 #Duration in ticks: 1200 = 1 Minute
 #Amplifier = Power of the effect
-#Particles: Show particles of the effect--> true / false
+#Particles: Show particles of the effect -> true / false
 
 Effect-ID: "1"
 Duration: "2400"
