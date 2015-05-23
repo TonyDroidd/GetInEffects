@@ -5,6 +5,13 @@
 #SPEED = 1
 #SLOWNESS = 2
 #HASTE = 3
+# JoinEffect by TonyDroidd
+
+#Effect ID's
+
+#SPEED = 1
+#SLOWNESS = 2
+#HASTE = 3
 #SWIFTNESS = 3
 #FATIGUE = 4
 #MINING_FATIGUE = 4
@@ -22,13 +29,12 @@
 #WITHER = 20
 #HEALTH_BOOST = 2
 
-#Effect-ID: ID of the effect
+#Effect-ID: ID pf the effect
 #Duration in ticks: 1200 = 1 Minute
 #Amplifier = Power of the effect
-#Particles: Show particles of the effect -> true / false
+#Particles: Show particles of the effect--> true / false
 
 Effect-ID: "1"
 Duration: "2400"
 Amplifier: "0"
 Particles: true
--------------
