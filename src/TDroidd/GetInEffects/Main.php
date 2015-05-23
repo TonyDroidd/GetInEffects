@@ -1,5 +1,5 @@
 <?php
-namespace TDroidd\JoinEffect;
+namespace TDroidd\GetInEffects;
 use pocketmine\Player;
 use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
 		$this->amplifier = array($cfg["Amplifier"]);
 		$cfg = $this->getConfig()->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info("JoinEffect By TDroidd 1.0 Enabled!");
+		$this->getLogger()->info("GetInEffects By TDroidd 1.0 Enabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
 		$p = $event->getPlayer();
@@ -42,6 +42,6 @@ class Main extends PluginBase implements Listener {
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
 	 */
 	public function onDisable() {
-		$this->getLogger()->info("JoinEffect By TDroidd v1.0 Unloaded!");
+		$this->getLogger()->info("GetInEffects By TDroidd v1.0 Unloaded!");
 	}
 }
