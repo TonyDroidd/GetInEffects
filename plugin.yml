@@ -1,6 +1,6 @@
 ---
 name: GetInEffects
-version: 1.0
+version: 1.0.1
 api: 1.12.0
 author: TonyDroidd
 main: TDroidd\GetInEffects\Main
