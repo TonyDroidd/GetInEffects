@@ -3,6 +3,6 @@ name: GetInEffects
 version: 1.0
 api: 1.0.0
 author: TonyDroidd
-main: TDroidd\JoinEffect\Main
+main: TDroidd\GetInEffects\Main
 description: Allows players to receive an effect when they join to server.
 website: https://github.com/TonyDroidd/GetInEffects
