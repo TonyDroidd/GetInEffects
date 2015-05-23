@@ -7,6 +7,7 @@ use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\utils\TextFormat;
+use pocketmine\entity\InstantEffect;
 class Main extends PluginBase implements Listener {
 	/**
 	 * OnEnable
@@ -17,22 +18,21 @@ class Main extends PluginBase implements Listener {
 	 */	
 	 public function onEnable(){
 		$this->saveDefaultConfig();
-		$cfg = yaml_parse(file_get_contents($this->getDataFolder() . "config.yml"));
-		$this->effect = array($cfg["Effect-ID"]);
-		$this->duration = array($cfg["Duration"]);
-		$this->particles = array($cfg["Particles"]);
-		$this->amplifier = array($cfg["Amplifier"]);
-		$cfg = $this->getConfig()->getAll();
+		$this->reloadConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getLogger()->info("GetInEffects By TDroidd 1.0 Enabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
+		$cfg=$this->getConfig();
+		$effectid=$cfg->get("Effect-ID");
+		$duration=$cfg->get("Duration");
+		$particles=$cfg->get("Particles");
+		$amplifier=$cfg->get("Amplifier");
 		$p = $event->getPlayer();
-		$cfg = $this->getConfig()->getAll();
-		$effect = Effect::getEffect($this->effect = $cfg["Effect-ID"]); //Effect ID
-		$effect->setVisible($this->particles = $cfg["Particles"]); //Particles
-		$effect->setAmplifier($this->amplifier = $cfg["Amplifier"]);
-		$effect->setDuration($this->duration = $cfg["Duration"]); //Ticks
+		$effect = Effect::getEffect($effectid); //Effect ID
+		$effect->setVisible($particles); //Particles
+		$effect->setAmplifier($amplifier);
+		$effect->setDuration($duration); //Ticks
 		$p->addEffect($effect);
 	}
 	/**
