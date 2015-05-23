@@ -36,7 +36,7 @@ class Main extends PluginBase implements Listener {
 		$p->addEffect($effect);
 	}
 	/**
-	 * OnDisable
+	 * OnDisable 
 	 * (non-PHPdoc)
 	 * 
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
