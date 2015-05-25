@@ -29,7 +29,7 @@
 #WITHER = 20
 #HEALTH_BOOST = 2
 
-#Effect-ID: ID pf the effect
+#Effect-ID: ID of the effect
 #Duration in ticks: 1200 = 1 Minute
 #Amplifier = Power of the effect
 #Particles: Show particles of the effect--> true / false
