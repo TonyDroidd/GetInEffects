@@ -20,29 +20,29 @@ class Main extends PluginBase implements Listener {
 		$this->saveDefaultConfig();
 		$this->reloadConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info("GetInEffects By TDroidd 1.0 Enabled!");
+		$this->getLogger()->info("§eGetInEffects By §bTDroidd 1.0.1 §aEnabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
 		if($event->getPlayer()->hasPermission("gieffects.effect")) {
 		$cfg=$this->getConfig();
-		$effectid=$cfg->get("Effect-ID");
-		$duration=$cfg->get("Duration");
-		$particles=$cfg->get("Particles");
-		$amplifier=$cfg->get("Amplifier");
-		$msgtype=$cfg->get("Message-Type");
-		$msg=$cfg->get("Join-Effect-Message");
+			$effectid=$cfg->get("Effect-ID");
+			$duration=$cfg->get("Duration");
+			$particles=$cfg->get("Particles");
+			$amplifier=$cfg->get("Amplifier");
+			$msgtype=$cfg->get("Message-Type");
+			$msg=$cfg->get("Join-Effect-Message");
 		$p = $event->getPlayer();
-		$effect = Effect::getEffect($effectid); //Effect ID
-		$effect->setVisible($particles); //Particles
-		$effect->setAmplifier($amplifier);
-		$effect->setDuration($duration); //Ticks
-		$p->addEffect($effect);
+	$effect = Effect::getEffect($effectid); //Effect ID
+	$effect->setVisible($particles); //Particles
+	$effect->setAmplifier($amplifier);
+	$effect->setDuration($duration); //Ticks
+	$p->addEffect($effect);
 		if($msgtype === "Tip"){
-		$p->sendTip($msg);
+			$p->sendTip($msg);
 		}elseif($msgtype === "PupUp"){
-		$p->sendPopup($msg);
+			$p->sendPopup($msg);
 		}elseif($msgtype === "Chat"){
-		$p->sendMessage($msg);
+			$p->sendMessage($msg);
 		}
 	}
 }
@@ -53,6 +53,6 @@ class Main extends PluginBase implements Listener {
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
 	 */
 	public function onDisable() {
-		$this->getLogger()->info("GetInEffects By TDroidd v1.0 Unloaded!");
+		$this->getLogger()->info("§eGetInEffects By §bTDroidd §av1.0.1 §4Unloaded!");
 	}
 }
