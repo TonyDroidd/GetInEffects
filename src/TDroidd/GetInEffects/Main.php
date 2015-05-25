@@ -23,6 +23,7 @@ class Main extends PluginBase implements Listener {
 		$this->getLogger()->info("GetInEffects By TDroidd 1.0 Enabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
+		if($event->getPlayer()->hasPermission("gieffects.effect")) {
 		$cfg=$this->getConfig();
 		$effectid=$cfg->get("Effect-ID");
 		$duration=$cfg->get("Duration");
@@ -34,6 +35,7 @@ class Main extends PluginBase implements Listener {
 		$effect->setAmplifier($amplifier);
 		$effect->setDuration($duration); //Ticks
 		$p->addEffect($effect);
+		}
 	}
 	/**
 	 * OnDisable 
