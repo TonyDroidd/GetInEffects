@@ -29,7 +29,7 @@
 #WITHER = 20
 #HEALTH_BOOST = 2
 
-#Effect-ID: ID of the effect
+#Effect-ID: ID pf the effect
 #Duration in ticks: 1200 = 1 Minute
 #Amplifier = Power of the effect
 #Particles: Show particles of the effect--> true / false
@@ -37,7 +37,7 @@
 #Available Types: Tip, PupUp, Chat
 Message-Type: "Tip"
 #You can change it for another message
-Join-Effect-Message: "§l§aYou Get The §eSPEED §aEffect 
+Join-Effect-Message: "§aYou Get The §eSPEED §aEffect "
 
 Effect-ID: "1"
 Duration: "2400"
