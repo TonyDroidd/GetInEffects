@@ -4,6 +4,6 @@
 * PocketMine-MP version: 1.5 - API 1.12.0
 * Categories: Fun, Admin Tools, General
 * Plugin Access: Entities
-* WebSite: https://github.com/TonyDroidd/JoinEffect
+* WebSite: https://github.com/TonyDroidd/GetInEfects
 <br>
 <br>
