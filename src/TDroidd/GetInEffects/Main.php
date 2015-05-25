@@ -29,14 +29,23 @@ class Main extends PluginBase implements Listener {
 		$duration=$cfg->get("Duration");
 		$particles=$cfg->get("Particles");
 		$amplifier=$cfg->get("Amplifier");
+		$msgtype=$cfg->get("Message-Type");
+		$msg=$cfg->get("Join-Effect-Message");
 		$p = $event->getPlayer();
 		$effect = Effect::getEffect($effectid); //Effect ID
 		$effect->setVisible($particles); //Particles
 		$effect->setAmplifier($amplifier);
 		$effect->setDuration($duration); //Ticks
 		$p->addEffect($effect);
+		if($msgtype === "Tip"){
+		$p->sendTip($msg);
+		}elseif($msgtype === "PupUp"){
+		$p->sendPopup($msg);
+		}elseif($msgtype === "Chat"){
+		$p->sendMessage($msg);
 		}
 	}
+}
 	/**
 	 * OnDisable 
 	 * (non-PHPdoc)
