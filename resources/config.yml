@@ -36,7 +36,7 @@
 
 #Available Types: Tip, PupUp, Chat
 Message-Type: "Tip"
-#You can change it for another message
+#You can change it for another message (Leave in blank for disable)
 Join-Effect-Message: "§aYou Get The §eSPEED §aEffect "
 
 Effect-ID: "1"
