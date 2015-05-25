@@ -34,6 +34,11 @@
 #Amplifier = Power of the effect
 #Particles: Show particles of the effect--> true / false
 
+#Available Types: Tip, PupUp, Chat
+Message-Type: "Tip"
+#You can change it for another message
+Join-Effect-Message: "§l§aYou Get The §eSPEED §aEffect 
+
 Effect-ID: "1"
 Duration: "2400"
 Amplifier: "0"
