@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener {
 		$this->saveDefaultConfig();
 		$this->reloadConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info("§eGetInEffects By §bTDroidd 1.0.1 §aEnabled!");
+		$this->getLogger()->info("§eGetInEffects By §bTDroidd 1.2 §aEnabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
 		if($event->getPlayer()->hasPermission("gieffects.effect")) {
@@ -53,6 +53,6 @@ class Main extends PluginBase implements Listener {
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
 	 */
 	public function onDisable() {
-		$this->getLogger()->info("§eGetInEffects By §bTDroidd §av1.0.1 §4Unloaded!");
+		$this->getLogger()->info("§eGetInEffects By §bTDroidd §av1.2 §4Unloaded!");
 	}
 }
