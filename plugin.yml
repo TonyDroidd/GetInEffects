@@ -8,5 +8,5 @@ description: Allows players to receive an effect when they join to server.
 website: https://github.com/TonyDroidd/GetInEffects
 permissions:
     gieffects.effect:
-        default: true
+        default: false
         description: "Allow to receive the effect"
