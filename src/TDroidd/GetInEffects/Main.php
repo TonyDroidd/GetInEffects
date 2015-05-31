@@ -39,7 +39,7 @@ class Main extends PluginBase implements Listener {
 	$p->addEffect($effect);
 		if($msgtype === "Tip"){
 			$p->sendTip($msg);
-		}elseif($msgtype === "PupUp"){
+		}elseif($msgtype === "PopUp"){
 			$p->sendPopup($msg);
 		}elseif($msgtype === "Chat"){
 			$p->sendMessage($msg);
