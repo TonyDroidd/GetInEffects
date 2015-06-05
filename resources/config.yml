@@ -43,3 +43,6 @@ Effect-ID: "1"
 Duration: "2400"
 Amplifier: "0"
 Particles: true
+
+#heals the players when join: true / false
+Fill-Player-Health: true
