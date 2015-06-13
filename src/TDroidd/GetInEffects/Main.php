@@ -5,7 +5,7 @@ use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
-use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\utils\TextFormat;
 use pocketmine\entity\InstantEffect;
 class Main extends PluginBase implements Listener {
@@ -20,9 +20,9 @@ class Main extends PluginBase implements Listener {
 		$this->saveDefaultConfig();
 		$this->reloadConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info("§eGetInEffects By §bTDroidd 1.3 §aEnabled!");
+		$this->getLogger()->info("§eGetInEffects By §bTDroidd 1.4 §aEnabled!");
 }
-		public function onJoin(PlayerJoinEvent $event) {
+		public function onRespawn(PlayerRespawnEvent $event) {
 		if($event->getPlayer()->hasPermission("gieffects.effect")) {
 		$cfg=$this->getConfig();
 			$effectid=$cfg->get("Effect-ID");
@@ -57,6 +57,6 @@ class Main extends PluginBase implements Listener {
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
 	 */
 	public function onDisable() {
-		$this->getLogger()->info("§eGetInEffects By §bTDroidd §av1.3 §4Unloaded!");
+		$this->getLogger()->info("§eGetInEffects By §bTDroidd §av1.4 §4Unloaded!");
 	}
 }
