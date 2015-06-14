@@ -64,10 +64,6 @@ class Main extends PluginBase implements Listener {
 		}
 	}
 }
-	public function onDrop(PlayerDropItemEvent $event){
-		$p = $event->getPlayer();
-		$p->kick("§4Tirar Items Causa Lag\n§ePor favor, No los tires... §fEstos se te borran \n§aautomaticamente §fcuando mueres.");
-	}
 	/**
 	 * OnDisable 
 	 * (non-PHPdoc)
