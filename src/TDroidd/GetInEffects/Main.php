@@ -5,7 +5,19 @@ use pocketmine\entity\Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
+use pocketmine\level\Level;
+
+use pocketmine\level\sound\FizzSound;
+use pocketmine\level\sound\BatSound;
+use pocketmine\level\sound\DoorSound;
+use pocketmine\level\sound\GenericSound;
+use pocketmine\level\sound\LaunchSound;
+use pocketmine\level\sound\PopSound;
+
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerDropItemEvent;
+use pocketmine\event\player\PlayerMoveEvent;
+//use pocketmine\event\player\PlayerDeathEvent; for the next update
 use pocketmine\utils\TextFormat;
 use pocketmine\entity\InstantEffect;
 class Main extends PluginBase implements Listener {
@@ -23,7 +35,10 @@ class Main extends PluginBase implements Listener {
 		$this->getLogger()->info("§eGetInEffects By §bTDroidd 1.4 §aEnabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
-		if($event->getPlayer()->hasPermission("gieffects.effect")) {
+			$p = $event->getPlayer();
+			$level = $p->getLevel();
+			$level->addSound(new FizzSound($p));
+		if($p->hasPermission("gieffects.effect")) {
 		$cfg=$this->getConfig();
 			$effectid=$cfg->get("Effect-ID");
 			$duration=$cfg->get("Duration");
@@ -32,7 +47,6 @@ class Main extends PluginBase implements Listener {
 			$msgtype=$cfg->get("Message-Type");
 			$msg=$cfg->get("Join-Effect-Message");
 			$health=$cfg->get("Fill-Player-Health");
-		$p = $event->getPlayer();
 	$effect = Effect::getEffect($effectid); //Effect ID
 	$effect->setVisible($particles); //Particles
 	$effect->setAmplifier($amplifier);
@@ -50,6 +64,10 @@ class Main extends PluginBase implements Listener {
 		}
 	}
 }
+	public function onDrop(PlayerDropItemEvent $event){
+		$p = $event->getPlayer();
+		$p->kick("§4Tirar Items Causa Lag\n§ePor favor, No los tires... §fEstos se te borran \n§aautomaticamente §fcuando mueres.");
+	}
 	/**
 	 * OnDisable 
 	 * (non-PHPdoc)
