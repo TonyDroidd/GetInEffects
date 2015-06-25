@@ -6,28 +6,21 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 use pocketmine\level\Level;
-
 use pocketmine\level\sound\FizzSound;
 use pocketmine\level\sound\BatSound;
 use pocketmine\level\sound\DoorSound;
 use pocketmine\level\sound\GenericSound;
 use pocketmine\level\sound\LaunchSound;
 use pocketmine\level\sound\PopSound;
-
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerDropItemEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 //use pocketmine\event\player\PlayerDeathEvent; for the next update
 use pocketmine\utils\TextFormat;
-use pocketmine\entity\InstantEffect;
 class Main extends PluginBase implements Listener {
-	/**
-	 * OnEnable
-	 *
-	 * (non-PHPdoc)
-	 * 
-	 * @see \pocketmine\plugin\PluginBase::onEnable()
-	 */	
+
+    private $Sound;
+
 	 public function onEnable(){
 		$this->saveDefaultConfig();
 		$this->reloadConfig();
@@ -35,11 +28,12 @@ class Main extends PluginBase implements Listener {
 		$this->getLogger()->info("§eGetInEffects By §bTDroidd 1.4 §aEnabled!");
 }
 		public function onJoin(PlayerJoinEvent $event) {
+                    $cfg=$this->getConfig();
 			$p = $event->getPlayer();
 			$level = $p->getLevel();
-			$level->addSound(new FizzSound($p));
+                        $Sound = "pocketmine\\level\\sound\\" . $cfg->get("Sound");
+                        $level->addSound(new $Sound ($p));
 		if($p->hasPermission("gieffects.effect")) {
-		$cfg=$this->getConfig();
 			$effectid=$cfg->get("Effect-ID");
 			$duration=$cfg->get("Duration");
 			$particles=$cfg->get("Particles");
