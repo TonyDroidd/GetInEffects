@@ -39,3 +39,7 @@ Particles: true
 
 #heals the players when join: true / false
 Fill-Player-Health: true
+
+#Play a sound when player join
+#Available sounds: BatSound | ClickSound | DoorSound | FizzSound | GenericSound | LaunchSound | PopSound
+Sound: FizzSound
