@@ -1,0 +1,12 @@
+---
+name: GetInEffects
+version: 1.5
+api: 1.12.0
+author: TonyDroidd
+main: TDroidd\GetInEffects\Main
+description: Allows players to receive an effect when they join the server.
+website: https://github.com/TonyDroidd/GetInEffects
+permissions:
+    gieffects.effect:
+        default: false
+        description: "Allow to receive the effect"
