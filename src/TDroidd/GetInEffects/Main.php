@@ -35,15 +35,15 @@ class Main extends PluginBase implements Listener {
     * @priority HIGHEST
     */
     
-	 public function onEnable(){
+    	 public function onEnable(){
 		$this->saveDefaultConfig();
 		$this->reloadConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getLogger()->info("§eGetInEffects 1.5 By §bTDroidd §aEnabled!");
+		$this->getLogger()->info("§eGetInEffects 1.6 By §bTDroidd §aEnabled!");
 }
-		public function onJoin(PlayerJoinEvent $event) {
-                    $cfg=$this->getConfig();
-			$p = $event->getPlayer();
+    
+        public function receiveEffect(\pocketmine\Player $p){
+        $cfg=$this->getConfig();
 			$level = $p->getLevel();
                         $Sound = "pocketmine\\level\\sound\\" . $cfg->get("Sound");
                         $level->addSound(new $Sound ($p));
@@ -72,6 +72,19 @@ class Main extends PluginBase implements Listener {
 		}
 	}
 }
+    
+		public function onJoin(PlayerJoinEvent $event) {
+                $cfg = $this->getConfig();
+                $p = $event->getPlayer();
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new JTask([$this,"receiveEffect"],[$p]),0);
+                }
+                public function onRespawn(PlayerRespawnEvent $event){
+                $cfg = $this->getConfig();
+                $p = $event->getPlayer();
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new JTask([$this,"receiveEffect"],[$p]),0);
+                }
+
+
                 /**
 	 * OnDisable 
 	 * (non-PHPdoc)
@@ -79,6 +92,6 @@ class Main extends PluginBase implements Listener {
 	 * @see \pocketmine\plugin\PluginBase::onDisable()
 	 */
 	public function onDisable() {
-		$this->getLogger()->info("§eGetInEffects By §bTDroidd §av1.5 §4Unloaded!");
+		$this->getLogger()->info("§eGetInEffects By §bTDroidd §av1.6 §4Unloaded!");
 	}
 }
