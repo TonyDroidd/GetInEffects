@@ -28,13 +28,13 @@
 #Particles: Show particles of the effect--> true / false
 
 #Available Types: Tip, PupUp, Chat
-Message-Type: "Tip"
+Message-Type: "tip"
 #You can change it for another message (Leave in blank for disable)
 Join-Effect-Message: "§aYou Get The §eSPEED §aEffect"
 
-Effect-ID: "1"
-Duration: "2400"
-Amplifier: "0"
+Effect-ID: 1
+Duration: 2400
+Amplifier: 0
 Particles: true
 
 #heals the players when join: true / false
